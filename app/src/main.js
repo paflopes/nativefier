@@ -55,6 +55,7 @@ app.on('before-quit', () => {
 
 app.on('ready', () => {
     mainWindow = createMainWindow(appArgs, app.quit, setDockBadge);
+    mainWindow.setMenu(null);
 });
 
 app.on('login', (event, webContents, request, authInfo, callback) => {
